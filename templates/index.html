@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Magic Translation Machine</title>
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #0f172a,
+                #1e293b,
+                #312e81
+            );
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+        /* BACKGROUND GLOW */
+        body::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            background: #7c3aed;
+
+            border-radius: 50%;
+
+            top: -150px;
+            left: -150px;
+
+            filter: blur(120px);
+
+            opacity: 0.4;
+        }
+
+        body::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            background: #06b6d4;
+
+            border-radius: 50%;
+
+            bottom: -150px;
+            right: -150px;
+
+            filter: blur(120px);
+
+            opacity: 0.4;
+        }
+
+        /* MAIN BOX */
+        .box {
+
+            position: relative;
+
+            z-index: 10;
+
+            width: 450px;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            background: rgba(255,255,255,0.08);
+
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            box-shadow:
+                0 8px 32px rgba(0,0,0,0.3);
+
+            animation: fadeIn 1s ease;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        h1 {
+
+            font-size: 34px;
+
+            margin-bottom: 10px;
+
+            font-weight: 700;
+        }
+
+        .subtitle {
+
+            color: #cbd5e1;
+
+            font-size: 14px;
+
+            margin-bottom: 30px;
+
+            line-height: 1.6;
+        }
+
+        /* FILE INPUT */
+        input[type="file"] {
+
+            width: 100%;
+
+            padding: 16px;
+
+            border-radius: 14px;
+
+            border: 2px dashed #06b6d4;
+
+            background: rgba(255,255,255,0.05);
+
+            color: white;
+
+            cursor: pointer;
+
+            margin-bottom: 20px;
+
+            transition: 0.3s;
+        }
+
+        input[type="file"]:hover {
+
+            background: rgba(255,255,255,0.1);
+
+            transform: scale(1.02);
+        }
+
+        /* DROPDOWN */
+        select {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border-radius: 14px;
+
+            border: none;
+
+            background: rgba(255,255,255,0.1);
+
+            color: white;
+
+            font-size: 15px;
+
+            margin-bottom: 20px;
+
+            outline: none;
+        }
+
+        option{
+            color:black;
+        }
+
+        /* BUTTON */
+        button {
+
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 14px;
+
+            background: linear-gradient(
+                90deg,
+                #7c3aed,
+                #06b6d4
+            );
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+
+            transform: translateY(-3px) scale(1.02);
+
+            box-shadow:
+                0 0 25px rgba(124,58,237,0.7);
+        }
+
+        .note {
+
+            margin-top: 25px;
+
+            font-size: 13px;
+
+            color: #cbd5e1;
+
+            line-height: 1.7;
+        }
+
+        /* FLOATING ANIMATION */
+        @keyframes fadeIn {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(40px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:500px){
+
+            .box{
+
+                width:90%;
+                padding:30px;
+            }
+
+            h1{
+                font-size:28px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>🧠 Magic Translation Machine</h1>
+
+        <p class="subtitle">
+            AI Powered PDF & DOCX Translation System <br>
+            Translate documents into multiple languages with voice and animated video generation.
+        </p>
+
+        <form action="/generate" method="POST" enctype="multipart/form-data">
+
+            <input type="file" name="file" required>
+
+            <select name="language">
+
+                <option value="en">English</option>
+
+                <option value="hi">Hindi</option>
+
+                <option value="bn">Bengali</option>
+
+            </select>
+
+            <button type="submit">
+                Upload
+            </button>
+
+        </form>
+
+        <p class="note">
+            Upload PDF or DOCX → Get translated text, audio narration, and animated video instantly.
+        </p>
+
+    </div>
+
+</body>
+
+</html>
