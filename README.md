@@ -41,11 +41,21 @@ Bengali
 ---
 
 ## ⚙️ Installation
-- Clone the repository: git clone https://github.com/your-username/Magic-Translation-Machine.git
-- Navigate to the project folder: git clone https://github.com/your-username/Magic-Translation-Machine.git
-- Install the required dependencies: pip install -r requirements.txt
-- Run the application: python app.py
-- Open your browser and visit: http://127.0.0.1:5000
+- Clone the repository:
+```bash
+  git clone https://github.com/your-username/Magic-Translation-Machine.git
+- Navigate to the project folder:
+```bash
+  git clone https://github.com/your-username/Magic-Translation-Machine.git
+- Install the required dependencies:
+```bash
+pip install -r requirements.txt
+- Run the application:
+```bash
+python app.py
+- Open your browser and visit:
+```bash
+http://127.0.0.1:5000
 
 ---
 
