@@ -1,4 +1,4 @@
-## 📄 Magic Translation Machine
+# 📄 Magic Translation Machine
 
 An AI-powered web application that translates PDF and DOCX documents into multiple languages while generating translated text, audio narration, and an animated video from the translated content.
 
@@ -23,14 +23,14 @@ Bengali
 ---
 
 ## 🛠️ Tech Stack
-# Frontend
+## Frontend
 - HTML5
 - CSS3
 - JavaScript
-# Backend
+## Backend
 - Python
 - Flask
-# Libraries & APIs
+## Libraries & APIs
 - PyMuPDF (fitz)
 - python-docx
 - Google Translate API (googletrans)
@@ -89,7 +89,7 @@ Bengali
 ---
 
 ## 📸 Preview
-# The application provides:
+## The application provides:
 - 📄 PDF/DOCX Upload
 - 🌍 Language Selection
 - 🔍 Extracted & Translated Text
